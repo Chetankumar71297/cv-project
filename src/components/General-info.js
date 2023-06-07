@@ -9,6 +9,7 @@ class GeneralInfo extends React.Component {
         email: "",
         phoneNumber: "",
         address: "",
+        description: "",
       },
     };
     this.handleOnChange = this.handleOnChange.bind(this);
@@ -59,6 +60,15 @@ class GeneralInfo extends React.Component {
             }}
           />
           <br />
+          <textarea
+            cols="40"
+            rows="5"
+            placeholder="Description"
+            value={this.state.generalInfo.description}
+            onChange={(event) => {
+              this.handleOnChange(event, "description");
+            }}
+          ></textarea>
         </div>
       );
     } else {
@@ -68,6 +78,7 @@ class GeneralInfo extends React.Component {
           <p>Email: {this.state.generalInfo.email}</p>
           <p>Phone Number: {this.state.generalInfo.phoneNumber}</p>
           <p>Address: {this.state.generalInfo.address}</p>
+          <p>Description: {this.state.generalInfo.description}</p>
         </div>
       );
     }

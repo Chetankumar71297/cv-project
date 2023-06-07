@@ -1,6 +1,6 @@
 import React from "react";
 import GeneralInfo from "./components/General-info";
-
+import EducationInfo from "./components/Education-info";
 class App extends React.Component {
   constructor() {
     super();
@@ -18,6 +18,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <GeneralInfo previewResume={this.state.previewResume} />
+        <EducationInfo previewResume={this.state.previewResume} />
         <button
           onClick={() => {
             this.handleOnClick();
